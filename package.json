@@ -4,6 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "browsersync:start": "browser-sync start --server --files 'index.html' 'css/*'",
+    "browsersync:reload": "browser-sync reload",
+    "reload": "npm run browsersync:reload",
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/app.css css/app.css",
+    "build-cleancss": "cleancss -o css/app.min.css css/app.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true scss/app.scss css/app.css",
+    "deploy": "npm run build",
+    "start": "concurrently 'npm run build-sass -- --watch' 'npm run browsersync:start'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/dnstld/design-system/issues"
   },
-  "homepage": "https://github.com/dnstld/design-system#readme"
+  "homepage": "https://github.com/dnstld/design-system#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "concurrently": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2"
+  }
 }
