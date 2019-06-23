@@ -1,0 +1,16 @@
+$primary: #db7093;
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 15%);
+
+// grey palette
+$grey-darkest: #2C2C34;
+$grey-darker: #33333A;
+$grey-dark: #515159;
+$grey-light: #a3a3b1;
+$grey-lighter: #d7d7e2;
+$grey-lightest: #ededf4;
+
+// alerts
+$error: #b92d25;
+$warning: #edba1d;
+$success: #4ca146;

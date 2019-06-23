@@ -18,7 +18,7 @@ function sassCompiler() {
   return gulp
     .src('./scss/app.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(gulp.dest('css/app.min.css'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
 			stream: true
 		}))
