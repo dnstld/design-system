@@ -1,0 +1,22 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: inherit;
+    color: inherit;
+  }
+
+  &:focus {
+    outline: 1px dotted currentColor;
+  }
+}
