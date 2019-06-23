@@ -1,11 +1,15 @@
+// variables
+@import "variables/colors";
+@import "variables/sizes";
+@import "variables/font-sizes";
+
 // base
 @import "base/reset";
 @import "base/initial";
 @import "base/unclassed";
 
-// variables
-@import "variables/colors";
-@import "variables/sizes";
+// helpers
+@import "helpers/text";
 
 // elements
 @import "elements/headings";

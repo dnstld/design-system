@@ -1,0 +1,17 @@
+$font-sizes: ();
+$font-sizes: map-merge(
+  (
+    sm: $size-12,
+    base: $size-16,
+    md: $size-20,
+    lg: $size-24,
+    xl: $size-28
+  ),
+  $font-sizes
+);
+
+$font-size-sm: map-get($font-sizes, sm);
+$font-size-base: map-get($font-sizes, base);
+$font-size-md: map-get($font-sizes, md);
+$font-size-lg: map-get($font-sizes, lg);
+$font-size-xl: map-get($font-sizes, xl);
