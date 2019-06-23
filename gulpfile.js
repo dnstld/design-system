@@ -7,7 +7,7 @@ const sass = require('gulp-sass')
 
 sass.compiler = require('node-sass')
 
-const watcher = watch(['index.html', 'scss/app.scss'])
+const watcher = watch(['index.html', 'scss/**/*.scss'])
 
 watcher.on('change', function(path, stats) {
   console.log(`File ${path} was changed`);

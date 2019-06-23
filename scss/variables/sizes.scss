@@ -1,0 +1,29 @@
+$sizes: ();
+$sizes: map-merge(
+  (
+    0: 0,
+    4: .25rem,
+    8: .5rem,
+    12: .75rem,
+    16: 1rem,
+    20: 1.25rem,
+    24: 1.5rem,
+    28: 1.75rem,
+    32: 2rem,
+    36: 2.25rem,
+    40: 2.5rem
+  ),
+  $sizes
+);
+
+$size-0: map-get($sizes, 0);
+$size-4: map-get($sizes, 4);
+$size-8: map-get($sizes, 8);
+$size-12: map-get($sizes, 12);
+$size-16: map-get($sizes, 16);
+$size-20: map-get($sizes, 20);
+$size-24: map-get($sizes, 24);
+$size-28: map-get($sizes, 28);
+$size-32: map-get($sizes, 32);
+$size-36: map-get($sizes, 36);
+$size-40: map-get($sizes, 40);
